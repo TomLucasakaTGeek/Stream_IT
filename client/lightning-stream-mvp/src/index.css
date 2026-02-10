@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * [SYSTEM DESIGN]: Global Styles
+ * Custom animations and base styles for the application
+ */
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-white antialiased;
+  }
+}
+
+@layer utilities {
+  /* Smooth scrolling for chat */
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom scrollbar for dark theme */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-zinc-800;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-zinc-600 rounded-full;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-zinc-500;
+  }
+}
+
+/* Lightning animation keyframes */
+@keyframes lightning-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(247, 147, 26, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(247, 147, 26, 0.8);
+  }
+}
+
+.lightning-glow {
+  animation: lightning-pulse 2s ease-in-out infinite;
+}
