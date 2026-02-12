@@ -100,6 +100,23 @@ lightning-stream-mvp/
 
 ## Common Issues & Solutions
 
+### Issue: "Cannot read properties of undefined (reading 'preimage')"
+**Cause:** Payment failed or was cancelled, but error wasn't caught properly  
+**Fix Option 1 - Enable Demo Mode:**
+```typescript
+// In src/App.tsx, change line ~33:
+const DEMO_MODE = true; // Set to true for testing without wallet
+```
+This simulates a successful payment without requiring a real wallet.
+
+**Fix Option 2 - Install WebLN Wallet:**
+1. Install [Alby Extension](https://getalby.com/)
+2. Create/fund wallet with testnet sats
+3. Refresh page and try again
+
+**Fix Option 3 - Check Console:**
+Open browser DevTools (F12) → Console tab to see detailed error messages
+
 ### Issue: "WebLN not available"
 **Cause:** No wallet extension installed  
 **Fix:** Install Alby or Zeus wallet

@@ -234,6 +234,20 @@ npm run test:e2e
 
 ## 🛠️ Troubleshooting
 
+### "Cannot read properties of undefined (reading 'preimage')" Error
+**Solution 1 - Enable Demo Mode (Recommended for Testing):**
+```typescript
+// Edit src/App.tsx, line ~33
+const DEMO_MODE = true;
+```
+This bypasses WebLN and simulates a successful payment after 2 seconds.
+
+**Solution 2 - Install WebLN Wallet:**
+Install Alby browser extension or Zeus wallet and fund with testnet sats.
+
+**Solution 3 - Check Browser Console:**
+Open DevTools (F12) to see detailed error messages.
+
 ### "WebLN not available" Error
 **Solution**: Install Alby browser extension or Zeus wallet
 

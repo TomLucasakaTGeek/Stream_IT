@@ -62,7 +62,7 @@ const AUTHORS = [
   "DiamondHands"
 ];
 
-export function useRollingComments(isPaid: boolean) {
+export function useRollingComments() {
   const [comments, setComments] = useState<Comment[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -141,15 +141,15 @@ export function useRollingComments(isPaid: boolean) {
 
   /**
    * [SYSTEM DESIGN]: Zap Comment Injection
-   * Called externally when payment succeeds to show visual confirmation
+   * Called externally when tip succeeds to show visual confirmation
    * in the chat stream. This creates immediate feedback loop for the user.
    * Also respects MAX_COMMENTS limit.
    */
-  const addZapComment = () => {
+  const addZapComment = (customMessage?: string) => {
     const zapComment: Comment = {
       id: `zap-${Date.now()}`,
       author: 'System',
-      text: '⚡ Stream unlocked with Lightning payment! ⚡',
+      text: customMessage || '⚡ New tip received! ⚡',
       timestamp: Date.now(),
       isZap: true
     };
