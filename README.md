@@ -1,6 +1,6 @@
-# BitStream - Bitcoin Powered Live Streaming App ⚡📺
+# StreamBit - Bitcoin Powered Live Streaming App ⚡📺
 
-BitStream is a decentralized-first, Value-for-Value (V4V) live streaming platform. It enables creators to receive real-time Bitcoin tips (Zaps) directly from their audience via the Lightning Network, utilizing the WebLN standard for a non-custodial, seamless experience.
+StreamBit is a decentralized-first, Value-for-Value (V4V) live streaming platform. It enables creators to receive real-time Bitcoin tips (Zaps) directly from their audience via the Lightning Network, utilizing the WebLN standard for a non-custodial, seamless experience.
 
 ## 🚀 Proof of Work (MVP Features)
 * **WebLN Integration:** Deep integration with Alby and other WebLN providers for instant, non-custodial Bitcoin tipping.
